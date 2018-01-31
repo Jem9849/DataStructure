@@ -37,7 +37,7 @@ CrimeData :: CrimeData(string currentCSVLine)
     getline(parseCSV, tempAllRobbery, ',');
     getline(parseCSV, tempYear, ',');
     
-    this->department = department;
+    this->department = department; //stod = string to double/stoi is string to int
     this->population = (stoi(tempPopulation));
     this->allPropertyRates = (stod(tempProperty));
     this->burglaryRates = (stod(tempBurglary));
@@ -64,7 +64,7 @@ CrimeData :: CrimeData(string currentCSVLine)
  Used for output either to a screen or a file using the << operator.
  It is a "friend" since that is how we are able to use the output stream.
  */
-ostream & operator << (ostream &outputStream, const CrimeData & outputData)
+ostream & operator << (ostream &outputStream, const CrimeData & outputData) // Basically the toString in Java
 {
     return outputStream << outputData.getDepartment() << " had an all violent rate of " << outputData.getAllViolentRates() << " in year: " << outputData.getYear();
 }
