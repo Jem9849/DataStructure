@@ -8,12 +8,12 @@
 #ifndef FileController_hpp
 #define FileController_hpp
 
-#include "../Data/CrimeData.hpp"
+#include "../Data/CrimeData.hpp" // ../ means to go up a folder.
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <vector>
-#include <sstream>
+#include <sstream> // Treats strings as a stream.
 
 using namespace std;
 
