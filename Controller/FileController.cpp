@@ -7,6 +7,11 @@
 
 #include "FileController.hpp"
 
+FileController :: FileController()
+{
+
+}
+
 vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
 {
 	std :: vector<CrimeData> crimeVector;

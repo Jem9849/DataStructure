@@ -20,6 +20,7 @@ using namespace std;
 class FileController
 {
 public:
+	FileController();
 	static vector<CrimeData> readCrimeDataToVector(string filename);
 };
 
