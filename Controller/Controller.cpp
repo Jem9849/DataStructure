@@ -12,7 +12,8 @@ using namespace std;
 
 void Controller :: start()
 {
-
+	Timer codeTimer;
+	codeTimer.stopTimer();
 }
 
 
