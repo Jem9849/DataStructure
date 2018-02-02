@@ -38,7 +38,7 @@ public:
 
 	// Methods.
 	int getSize() const;
-	Type getFromINdex(int index);
+	Type getFromIndex(int index);
 	void setAtIndex(int index, Type data);
 
 
@@ -115,5 +115,18 @@ int Array<Type> :: getSize() const
 {
 	return size;
 }
+
+template <class Type>
+Type Array<Type> :: getFromIndex(int index)
+{
+	assert(index >=0 && index < size);
+
+	Type value = internalArray[index];
+
+	return value;
+}
+
+
+
 
 #endif /* MODEL_STRUCTURES_ARRAY_HPP_ */
