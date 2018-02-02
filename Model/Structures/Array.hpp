@@ -110,5 +110,10 @@ Type Array<Type> :: operator [] (int index) const
 	return internalArray[index];
 }
 
+template <class Type>
+int Array<Type> :: getSize() const
+{
+	return size;
+}
 
 #endif /* MODEL_STRUCTURES_ARRAY_HPP_ */
