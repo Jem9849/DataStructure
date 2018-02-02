@@ -126,6 +126,14 @@ Type Array<Type> :: getFromIndex(int index)
 	return value;
 }
 
+template <class Type>
+void Array<Type> :: setAtIndex(int pos, Type item)
+{
+	assert(pos >= 0 && pos < size);
+	internalArray[pos] = item;
+}
+
+
 
 
 
