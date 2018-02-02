@@ -48,7 +48,14 @@ void Controller :: start()
 
 void Controller :: testArray()
 {
+	Array<int> JemArray(45);
 
+	cout << JemArray.getSize() << endl;
+
+	JemArray[0] = 123;
+	JemArray.setAtIndex(0, 321);
+
+	cout << JemArray[0] << endl;
 }
 
 
