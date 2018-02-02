@@ -12,13 +12,17 @@ using namespace std;
 
 void Controller :: start()
 {
-	Timer codeTimer;
-	codeTimer.startTimer();
-	cout << "Look" << endl;
-	codeTimer.stopTimer();
-	codeTimer.displayInformation();
-	codeTimer.resetTimer();
-	codeTimer.startTimer();
+	//findMaxAndMinx();
+
+	testArray();
+
+//	Timer codeTimer;
+//	codeTimer.startTimer();
+//	cout << "Look" << endl;
+//	codeTimer.stopTimer();
+//	codeTimer.displayInformation();
+//	codeTimer.resetTimer();
+//	codeTimer.startTimer();
 //	for (int index = 0; index < 500; index++)
 //	{
 //		cout << "Index is " << index << "\n";
@@ -26,15 +30,25 @@ void Controller :: start()
 //	codeTimer.stopTimer();
 //	codeTimer.displayInformation();
 
-	vector<CrimeData> myData = FileController :: readCrimeDataToVector("C://Users//Jeremy//Documents//Eclipse Coding//DataStructure//Data//crime.csv");
+//	vector<CrimeData> myData = FileController :: readCrimeDataToVector("C://Users//Jeremy//Documents//Eclipse Coding//DataStructure//Data//crime.csv");
+//
+//	for (int index = 200; index <= 215; index += 1)
+//	{
+//		cout << index << " is " << myData[index] << endl;
+//	}
+//
+//	codeTimer.stopTimer();
+//	codeTimer.displayInformation();
+}
 
-	for (int index = 200; index <= 215; index += 1)
-	{
-		cout << index << " is " << myData[index] << endl;
-	}
+//void Controller :: findMaxAndMin()
+//{
+//
+//}
 
-	codeTimer.stopTimer();
-	codeTimer.displayInformation();
+void Controller :: testArray()
+{
+
 }
 
 
