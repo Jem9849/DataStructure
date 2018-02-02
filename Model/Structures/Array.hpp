@@ -133,8 +133,4 @@ void Array<Type> :: setAtIndex(int pos, Type item)
 	internalArray[pos] = item;
 }
 
-
-
-
-
 #endif /* MODEL_STRUCTURES_ARRAY_HPP_ */
