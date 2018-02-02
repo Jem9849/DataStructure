@@ -103,7 +103,12 @@ Type & Array<Type> :: operator [] (int index)
 	return internalArray[index];
 }
 
-
+template <class Type>
+Type Array<Type> :: operator [] (int index) const
+{
+	assert(index >= 0 && index < size);
+	return internalArray[index];
+}
 
 
 #endif /* MODEL_STRUCTURES_ARRAY_HPP_ */
