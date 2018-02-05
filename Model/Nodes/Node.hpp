@@ -21,6 +21,13 @@ protected:
 
 };
 
+template <class Type>
+Node<Type> :: Node()
+{
+	// Needed for default constructor complilation,
+	// Since when structure created it has no item.
+}
+
 
 
 
