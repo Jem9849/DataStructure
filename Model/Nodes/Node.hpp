@@ -28,7 +28,11 @@ Node<Type> :: Node()
 	// Since when structure created it has no item.
 }
 
-
+template <class Type>
+Node<Type> :: Node(Type data)
+{
+	this->data = data;
+}
 
 
 #endif /* MODEL_NODE_NODE_HPP_ */
