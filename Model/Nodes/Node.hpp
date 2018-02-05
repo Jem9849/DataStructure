@@ -14,7 +14,7 @@ class Node {
 public:
 	Node();
 	Node(Type data);
-	void getData(Type data);
+	void setData(Type data);
 	Type getData();
 protected:
 	Type data;
@@ -34,5 +34,15 @@ Node<Type> :: Node(Type data)
 	this->data = data;
 }
 
+template <class Type>
+void Node<Type> :: setData(Type data)
+{
+	this->data = data;
+}
 
+template <class Type>
+Type Node<Type> :: getData()
+{
+	return data;
+}
 #endif /* MODEL_NODE_NODE_HPP_ */
