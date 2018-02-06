@@ -11,12 +11,20 @@
 #include "Node.hpp"
 
 template <class Type>
-class LinearNode :: public Node<Type>
+class LinearNode : public Node<Type>
 {
+public:
+	// Constructors
+	LinearNode();
+	LinearNode(Type data);
+	LinearNode(Type data, LinearNode<Type> * next);
+	// Methods
+	void setNextNode(LinearNode<Type> * next);
+	LinearNode<Type> * getNextNode();
 	// This section is available to subclasses of LinearNode.
 protected:
 	LinearNode<Type> * next;
-}
+};
 
 
 
