@@ -48,5 +48,14 @@ LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data)
 	this->next = nullptr;
 }
 
+/**
+ * This constructor is used to create a reference to instance
+ * with data and a known link.
+ */
+template <class Type>
+LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(data)
+{
+	this->next = next;
+}
 
 #endif /* MODEL_NODES_LINEARNODE_HPP_ */
