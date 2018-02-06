@@ -10,6 +10,14 @@
 
 #include "Node.hpp"
 
+template <class Type>
+class LinearNode :: public Node<Type>
+{
+	// This section is available to subclasses of LinearNode.
+protected:
+	LinearNode<Type> * next;
+}
+
 
 
 
