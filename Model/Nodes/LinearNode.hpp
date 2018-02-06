@@ -58,4 +58,18 @@ LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(
 	this->next = next;
 }
 
+// Acessor methods.
+template <class Type>
+void LinearNode<Type> :: setNextNode(LinearNode<Type> *
+		nextNodePointer)
+	{
+		this->next = nextNodePointer;
+	}
+
+template <class Type>
+LinearNode<Type> * LinearNode<Type> :: getNextNode()
+{
+	return next;
+}
+
 #endif /* MODEL_NODES_LINEARNODE_HPP_ */
