@@ -39,5 +39,10 @@ void ArrayTester :: testArrayUse()
 	cout << secondArray.getFromIndex(4);
 }
 
+void ArrayTester :: testAdvancedArray()
+{
+	vector<CrimeData> test = FileController :: readCrimeDataToVector
+}
+
 
 
