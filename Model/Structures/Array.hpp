@@ -110,6 +110,7 @@ Type Array<Type> :: operator [] (int index) const
 	return internalArray[index];
 }
 
+//Basic
 template <class Type>
 int Array<Type> :: getSize() const
 {
