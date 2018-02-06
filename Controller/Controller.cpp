@@ -13,7 +13,9 @@ using namespace std;
 void Controller :: start()
 {
 	//findMaxAndMinx();
-
+	ArrayTester myTest;
+	myTest.testArrayUse();
+	myTest.testAdvancedArray();
 	testArray();
 
 //	Timer codeTimer;
