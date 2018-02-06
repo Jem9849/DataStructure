@@ -35,6 +35,8 @@ void ArrayTester :: testArrayUse()
 
 	thirdArray[5] = 123;
 	cout << thirdArray[5] << endl;
+	secondArray.setAtIndex(4, 5);
+	cout << secondArray.getFromIndex(4);
 }
 
 
