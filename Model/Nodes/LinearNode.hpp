@@ -26,8 +26,17 @@ protected:
 	LinearNode<Type> * next;
 };
 
+//Constructors
 
-
+/**
+ * This constructor is used for building the raw structure
+ * before the values are known.
+ */
+template <class Type>
+LinearNode<Type> :: LinearNode() : Node<Type>()
+{
+	this->next =  nullptr;
+}
 
 
 #endif /* MODEL_NODES_LINEARNODE_HPP_ */
