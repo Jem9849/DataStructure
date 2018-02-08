@@ -39,7 +39,7 @@ Methods
 -
 Data Members
 -
-(Empty)
+# LinearNode&lt;Type&gt; : * next 
 -
 Constructors
 -
