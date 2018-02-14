@@ -32,11 +32,17 @@ public:
 	Type remove(int index);
 	// Type setAtIndex(int index, Type item);
 	// bool contains(Type item);
+
+	LinkedList<Type> :: LinkedList()
+	{
+		this -> front = nullptr;
+		this -> end = nullptr;
+		this -> size = 0;
+	}
 protected:
 	LinearNode<Type> * front;
 	LinearNode<Type> * end;
 };
-
 
 
 #endif /* MODEL_STRUCTURES_LINKEDLIST_HPP_ */
