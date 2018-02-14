@@ -14,6 +14,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream> // Treats strings as a stream.
+#include LinkedList.hpp
 
 using namespace std;
 
@@ -22,6 +23,8 @@ class FileController
 public:
 	FileController();
 	static vector<CrimeData> readCrimeDataToVector(string filename);
+	static LinkedList<CrimeData> readDataToList(string filename);
+
 };
 
 
