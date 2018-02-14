@@ -54,5 +54,26 @@ void LinkedListTester :: testListBasics()
 	cout << numbers.getEnd() -> getData() << " Is at the end of the list and should be 32567" << endl;
 }
 
+void LinkedListTester :: testListWithData()
+{
+	Timer listTimer;
+
+	listTimer.startTimer();
+	LinkedList<CrimeData> crimes = FileController :: readDataToList("C://Users//Jeremy//Documents//Eclipse Coding//DataStructure//Data//crime.csv");
+	listTimer.stopTimer();
+	cout << "This is how long it took to read into our custom data struct." << endl;
+	listTimer.displayInformation();
+
+	listTimer.resetTimer();
+	cout << "Here is how long it takes to access a random data value." << endl;
+	listTimer.startTimer();
+	int randomLocation = (rand() * rand()) % crimes.getSize();
+	cout << "The random index is " << randomLocation << endl;
+	double totalViolentRate = crimes.getFromIndex(randomLocation).getAllViolentRates();
+	listTimer.stopTimer();
+	cout << "The random crime stat is: " << totalViolentRate << " ,and here is the time." << endl;
+	listTimer.displayInformation();
+}
+
 
 #endif /* TESTERS_LINKEDLISTTESTER_HPP_ */

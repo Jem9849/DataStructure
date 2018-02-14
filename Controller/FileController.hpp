@@ -23,10 +23,10 @@ class FileController
 public:
 	FileController();
 	static vector<CrimeData> readCrimeDataToVector(string filename);
-	static LinkedList<CrimeData> readDataToList(string filename);
+	static LinkedList<CrimeData> readDataToList(string fileName);
 };
 
-LinkedList<CrimeData> FileController :: readDataToList(string filename)
+LinkedList<CrimeData> FileController :: readDataToList(string fileName)
 {
 	LinkedList<CrimeData> crimes;
 
