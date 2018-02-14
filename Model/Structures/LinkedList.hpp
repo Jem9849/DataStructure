@@ -33,16 +33,21 @@ public:
 	// Type setAtIndex(int index, Type item);
 	// bool contains(Type item);
 
-	LinkedList<Type> :: LinkedList()
+
+protected:
+	LinearNode<Type> * front;
+	LinearNode<Type> * end;
+};
+
+template <class Type>
+LinkedList<Type> :: LinkedList()
 	{
 		this -> front = nullptr;
 		this -> end = nullptr;
 		this -> size = 0;
 	}
-protected:
-	LinearNode<Type> * front;
-	LinearNode<Type> * end;
-};
+
+
 
 
 #endif /* MODEL_STRUCTURES_LINKEDLIST_HPP_ */
