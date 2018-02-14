@@ -24,7 +24,6 @@ public:
 	FileController();
 	static vector<CrimeData> readCrimeDataToVector(string filename);
 	static LinkedList<CrimeData> readDataToList(string filename);
-
 };
 
 
