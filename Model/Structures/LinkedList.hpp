@@ -12,9 +12,12 @@
 
 using namespace std;
 
-class LinkedList
+template <class Type>
+class LinkedList : public List<Type>
 {
-
+protected:
+	LinearNode<Type> * front;
+	LinearNode<Type> * end;
 };
 
 
