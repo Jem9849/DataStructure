@@ -8,7 +8,7 @@
 #ifndef MODEL_STRUCTURES_LINKEDLIST_HPP_
 #define MODEL_STRUCTURES_LINKEDLIST_HPP_
 #include <iostream>
-#include "List.hpp"
+#include "../Nodes/List.hpp"
 
 using namespace std;
 
@@ -100,7 +100,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
 		{
 			LinearNode<Type> * previous = nullptr;
 			LinearNode<Type> * current = front;
-			for (int position = 0; position < index; postion++)
+			for (int position = 0; position < index; position++)
 			{
 				previous = current;
 				current = current -> getNextNode();
