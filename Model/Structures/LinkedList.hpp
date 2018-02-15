@@ -8,7 +8,8 @@
 #ifndef MODEL_STRUCTURES_LINKEDLIST_HPP_
 #define MODEL_STRUCTURES_LINKEDLIST_HPP_
 #include <iostream>
-#include "../Nodes/List.hpp"
+
+#include "List.hpp"
 
 using namespace std;
 

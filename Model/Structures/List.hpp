@@ -5,11 +5,11 @@
  *      Author: Jeremy
  */
 
-#ifndef MODEL_NODES_LIST_HPP_
-#define MODEL_NODES_LIST_HPP_
+#ifndef MODEL_STRUCTURES_LIST_HPP_
+#define MODEL_STRUCTURES_LIST_HPP_
 
 #include <assert.h>
-#include "../../Nodes/LinearNode.hpp"
+#include "../Nodes/LinearNode.hpp"
 
 template <class Type>
 class List
@@ -30,4 +30,4 @@ protected:
 
 
 
-#endif /* MODEL_NODES_LIST_HPP_ */
+#endif /* MODEL_STRUCTURES_LIST_HPP_ */
