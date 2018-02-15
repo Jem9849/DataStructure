@@ -161,6 +161,24 @@ Type LinkedList<Type> :: remove(int index)
 }
 
 template <class Type>
+Type LinkedList<Type> :: getFromIndex(int index)
+{
+	assert(index >= 0 && index < this -> size);
+	Type data;
+
+	LinearNode<Type> * current = front;
+
+	for (int pos = 0; pos < index; pos++)
+	{
+		current = current -> getNextNode();
+	}
+
+	data = current -> getData();
+
+	return data;
+}
+
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {
 	return this -> end;
@@ -177,8 +195,5 @@ int LinkedList<Type> :: getSize() const
 {
 	return this -> size;
 }
-
-
-
 
 #endif /* MODEL_STRUCTURES_LINKEDLIST_HPP_ */
