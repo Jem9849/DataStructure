@@ -60,5 +60,14 @@ void Controller :: testArray()
 	cout << JemArray[0] << endl;
 }
 
+void Controller :: testLinkedList()
+{
+	LinkedList<int> numbers;
+	numbers.add(23);
+	numbers.add(64);
+	numbers.add(75);
+
+	cout << numbers.getFront() -> getData() << " ,is at that front." << endl;
+}
 
 

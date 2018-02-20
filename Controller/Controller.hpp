@@ -18,6 +18,7 @@
 class Controller
 {
 private:
+	void testLinkedList();
 	void testArray();
 	//void findMaxAndMin();
 public:
