@@ -66,7 +66,7 @@ LinkedList<CrimeData> FileController :: readDataToList(string fileName)
 		while (!dataFile.eof())
 		{
 			// Grab each line separated by carriage return.
-			getline(dataFile, currentCSVLine, '\r');
+			getline(dataFile, currentCSVLine, '\n');
 			// Exclude header row.
 			if (rowCount != 0)
 			{
