@@ -18,6 +18,12 @@ class Queue : public LinkedList<Type>
 public:
 	Queue();
 	~Queue();
+
+	// Queue methods
+	void enqueue(Type data);
+	Type dequeue();
+	Type peek();
+	void clear();
 };
 
 
