@@ -15,7 +15,12 @@ class Stack : public LinkedList<Type>
 {
 public:
 	Stack();
-	~stack();
+	~Stack();
+
+	// Stack specific methods
+	void push(Type data);
+	Type pop();
+	Type peek();
 };
 
 
