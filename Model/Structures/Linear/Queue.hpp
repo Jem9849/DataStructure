@@ -38,6 +38,15 @@ Queue<Type> :: Queue() : LinkedList<Type>()
 	//Empty; Handled by parent class constructor.
 }
 
+template <class Type>
+Queue<Type> :: ~Queue()
+{
+	for(LinearNode<Type> * removed = this -> front; removed != nullptr; removed = this -> front)
+	{
+		this -> front = removed -> getNextNode();
+		delete removed;
+	}
+}
 
-
+template <class Type>
 #endif /* MODEL_STRUCTURES_LINEAR_QUEUE_HPP_ */
