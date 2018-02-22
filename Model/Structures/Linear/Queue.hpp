@@ -77,4 +77,23 @@ void Queue<Type> :: add(Type item)
 {
 	enqueue(item);
 }
+
+template <class Type>
+Type Queue<Type> :: dequeue()
+{
+	assert(this -> size > 0);
+
+	Type returned = this -> front -> getData();
+
+	LinearNode<Type> * removed = this -> front;
+	this -> front = removed -> getNextNode();
+
+	delete removed;
+
+	this -> size = this -> size - 1;
+
+	return returned;
+}
+
+
 #endif /* MODEL_STRUCTURES_LINEAR_QUEUE_HPP_ */
