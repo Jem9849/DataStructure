@@ -95,5 +95,10 @@ Type Queue<Type> :: dequeue()
 	return returned;
 }
 
-
+template <class Type>
+Type Queue<Type> :: remove(int index)
+{
+	assert(index == 0);
+	return dequeue();
+}
 #endif /* MODEL_STRUCTURES_LINEAR_QUEUE_HPP_ */
