@@ -21,6 +21,12 @@ public:
 	void push(Type data);
 	Type pop();
 	Type peek();
+
+	// LinkedList overrided methods.
+	void add(Type data);
+	void addAtIndex(int index, Type data);
+	Type getFromIndex(int index);
+	Type remove(int index);
 };
 
 
