@@ -36,6 +36,15 @@ Stack<Type> :: Stack() : LinkedList<Type>()
 	// Empty. no code needed right now.
 }
 
+template <class Type>
+Stack<Type> :: ~Stack()
+{
+	while(this -> size > 0)
+	{
+		pop();
+	}
+}
+
 
 
 
