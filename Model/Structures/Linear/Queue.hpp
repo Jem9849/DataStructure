@@ -124,4 +124,5 @@ Type Queue<Type> :: getFromIndex(int index)
 	assert(index == 0);
 	return peek();
 }
+
 #endif /* MODEL_STRUCTURES_LINEAR_QUEUE_HPP_ */
