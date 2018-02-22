@@ -24,6 +24,12 @@ public:
 	Type dequeue();
 	Type peek();
 	void clear();
+
+	// Overridden methods of LinkedList
+	void add(Type data);
+	void getAtIndex(int index, Type data);
+	Type getFromIndex(int index);
+	Type remove(int index);
 };
 
 
