@@ -8,7 +8,7 @@
 #ifndef TESTERS_LINKEDLISTTESTER_HPP_
 #define TESTERS_LINKEDLISTTESTER_HPP_
 
-#include "../Model/Structures/LinkedList.hpp"
+#include "../Model/Structures/Linear/LinkedList.hpp"
 #include "../Controller/FileController.hpp"
 #include "../Controller/Tools/Timer.hpp"
 #include "../Data/CrimeData.hpp"

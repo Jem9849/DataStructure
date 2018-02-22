@@ -14,7 +14,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream> // Treats strings as a stream.
-#include "../Model/Structures/LinkedList.hpp"
+#include "../Model/Structures/Linear/LinkedList.hpp"
 
 using namespace std;
 
