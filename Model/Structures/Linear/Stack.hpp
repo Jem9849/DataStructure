@@ -77,6 +77,20 @@ void Stack<Type> :: addAtIndex(int index, Type Data)
 	push(data);
 }
 
+template <class Type>
+Type Stack<Type> :: pop()
+{
+	assert (this -> size > 0);
+	Type removed = this -> front -> getData();
+
+	LinearNode<Type> * removedNode = this -> getFront();
+	this -> front = removedNode -> getNextNode();
+	delete removedNode;
+
+	this -> size--;
+
+	return removed;
+}
 
 
 #endif /* MODEL_STRUCTURES_LINEAR_STACK_HPP_ */
