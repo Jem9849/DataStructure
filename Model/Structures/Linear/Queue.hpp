@@ -71,4 +71,10 @@ void Queue<Type> :: addAtIndex(int index, Type item)
 	assert(index == this -> size -1);
 	enqueue(item);
 }
+
+template <class Type>
+void Queue<Type> :: add(Type item)
+{
+	enqueue(item);
+}
 #endif /* MODEL_STRUCTURES_LINEAR_QUEUE_HPP_ */
