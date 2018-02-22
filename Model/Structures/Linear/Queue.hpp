@@ -101,4 +101,13 @@ Type Queue<Type> :: remove(int index)
 	assert(index == 0);
 	return dequeue();
 }
+
+template <class Type>
+void Queue<Type> :: clear()
+{
+	while (this -> front != nullptr)
+	{
+		cout << dequeue() << endl;
+	}
+}
 #endif /* MODEL_STRUCTURES_LINEAR_QUEUE_HPP_ */
