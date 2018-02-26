@@ -18,7 +18,10 @@
 
 class TestingStacksAndQueues
 {
-
+public:
+	void stackVersusList();
+	void stackVersusQueue();
+	void queueVersusList();
 };
 
 
