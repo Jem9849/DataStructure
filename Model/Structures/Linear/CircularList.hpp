@@ -31,6 +31,28 @@ public:
 
 };
 
+template <class Type>
+CircularList<Type> :: CircularList()
+{
+	front -> setPrevious(end);
+	front -> setNext(end);
+
+	end -> setPrevious(front);
+	end -> setNext(front);
+}
+
+template <class Type>
+CircularList<Type> :: ~CircularList()
+{
+	DoubleNode<Type> * current = front;
+	while (this -> front != nullptr)
+	{
+		front = front -> getNext();
+		delete current;
+		current = front;
+	}
+}
+
 
 
 
