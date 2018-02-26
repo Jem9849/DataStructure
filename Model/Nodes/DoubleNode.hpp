@@ -50,6 +50,23 @@ DoubleNode<Type> :: DoubleNode(Type data, DoubleNode<Type> * previous,
 		this -> next = next;
 	}
 
+template <class Type>
+void DoubleNode<Type> :: setNext(DoubleNode<Type> * next)
+{
+	this -> next = next;
+}
+
+template <class Type>
+DoubleNode<Type> * DoubleNode<Type> :: getPrevious()
+{
+	return previous;
+}
+
+template <class Type>
+DoubleNode<Type> * DoubleNode<Type> :: getNext()
+{
+	return next;
+}
 
 
 
