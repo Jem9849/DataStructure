@@ -20,7 +20,14 @@ private:
 
 	DoubleNode<Type> * findNode(int index);
 public:
+	CircularList();
+	~CircularList();
 
+	void add(Type item);
+	void addAtIndex(int index, Type item);
+	Type remove(int index);
+	Type getFromIndex(int index);
+	int getSize() const;
 
 };
 
