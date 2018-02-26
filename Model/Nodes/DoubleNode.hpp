@@ -13,7 +13,19 @@
 template <class Type>
 class DoubleNode : public Node<Type>
 {
+public:
+	DoubleNode();
+	DoubleNode(Type data);
+	DoubleNode(Type data, DoubleNode<Type> * previous, DoubleNode<Type> * next);
 
+	DoubleNode<Type> * getPrevious();
+	DoubleNode<Type> * getNext();
+
+	void setPrevious(DoubleNode<Type> * previous);
+	void setNext(DoubleNode<Type> * next);
+protected:
+	DoubleNode<Type> * previous;
+	DoubleNode<Type> * next;
 };
 
 
