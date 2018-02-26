@@ -175,6 +175,12 @@ Type CircularList<Type> :: remove(int index)
 	return value;
 }
 
+template <class Type>
+int CircularList<Type> :: getSize() const
+{
+	return this -> size;
+}
+
 
 
 
