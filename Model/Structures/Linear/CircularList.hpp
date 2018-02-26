@@ -53,6 +53,32 @@ CircularList<Type> :: ~CircularList()
 	}
 }
 
+template <class Type>
+DoubleNode<Type> * CircularList<Type> :: findNode(int index)
+{
+	assert (index >= 0 && index < this -> size);
+	DoubleNode<Type> * nodeToFind;
+
+	if (index < this -> size / 2)
+	{
+		nodeToFind = this -> front;
+		for (int pos = 0; pos < index; pos++)
+		{
+			nodeToFind = nodeToFind -> getNext();
+		}
+	}
+	else
+	{
+		nodeToFind = this -> end;
+		for (int pos = this -> size - 1; pos > index; pos--)
+		{
+			nodeToFind = nodeToFind -> getPrevious();
+		}
+	}
+
+	return nodeToFind;
+}
+
 
 
 
