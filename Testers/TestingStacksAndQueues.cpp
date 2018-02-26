@@ -68,7 +68,7 @@ void TestingStacksAndQueues :: stackVersusList()
 
 void TestingStacksAndQueues :: stackVersusQueue()
 {
-
+	vector<CrimeData> data = FileController :: readCrimeDataToVector("");
 }
 
 void TestingStacksAndQueues :: queueVersusList()
