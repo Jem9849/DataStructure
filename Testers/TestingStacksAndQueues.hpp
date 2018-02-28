@@ -9,8 +9,8 @@
 #define TESTERS_TESTINGSTACKSANDQUEUES_HPP_
 #include <iostream>
 
-#include "../Controller/Tools/Timer.cpp"
-#include "../Controller/FileController.cpp"
+#include "../Controller/Tools/Timer.hpp"
+#include "../Controller/FileController.hpp"
 #include "../Model/Structures/Linear/Queue.hpp"
 #include "../Model/Structures/Linear/Stack.hpp"
 #include "../Model/Structures/Linear/LinkedList.hpp"

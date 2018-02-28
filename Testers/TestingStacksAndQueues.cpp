@@ -68,7 +68,7 @@ void TestingStacksAndQueues :: stackVersusList()
 
 void TestingStacksAndQueues :: stackVersusQueue()
 {
-	vector<CrimeData> data = FileController :: readCrimeDataToVector("");
+	vector<CrimeData> data = FileController :: readCrimeDataToVector("C://Users//Jeremy//Documents//Eclipse Coding//DataStructure//Data//crime.csv");
 
 	Stack<CrimeData> crimeStack;
 	Queue<CrimeData> crimeQueue;
@@ -102,6 +102,12 @@ void TestingStacksAndQueues :: stackVersusQueue()
 	{
 		queue.enqueue(index);
 		stack.push(index);
+	}
+
+	for (int index = 0; index < 10; index++)
+	{
+		stackFromQueue.push(queue.dequeue());
+		queueFromStack.enqueue(stack.pop());
 	}
 
 	for (int index = 0; index < 10; index++)

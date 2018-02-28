@@ -21,6 +21,10 @@ void Controller :: start()
 	testLinkedList();
 	LinkedListTester myTester;
 	myTester.testListWithData();
+	TestingStacksAndQueues myOtherTester;
+	myOtherTester.stackVersusList();
+	myOtherTester.stackVersusQueue();
+	myOtherTester.queueVersusList();
 
 //	Timer codeTimer;
 //	codeTimer.startTimer();
