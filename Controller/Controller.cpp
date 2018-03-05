@@ -14,17 +14,17 @@ using namespace std;
 void Controller :: start()
 {
 	//findMaxAndMinx();
-	ArrayTester myTest;
-	myTest.testArrayUse();
-	myTest.testAdvancedArray();
-	testArray();
-	testLinkedList();
-	LinkedListTester myTester;
-	myTester.testListWithData();
-	TestingStacksAndQueues myOtherTester;
-	myOtherTester.stackVersusList();
-	myOtherTester.stackVersusQueue();
-	myOtherTester.queueVersusList();
+//	ArrayTester myTest;
+//	myTest.testArrayUse();
+//	myTest.testAdvancedArray();
+//	testArray();
+//	testLinkedList();
+//	LinkedListTester myTester;
+//	myTester.testListWithData();
+//	TestingStacksAndQueues myOtherTester;
+//	myOtherTester.stackVersusList();
+//	myOtherTester.stackVersusQueue();
+//	myOtherTester.queueVersusList();
 	RecursionTester test;
 	test.testRecursionNumbers();
 	test.testRecursionString();
