@@ -31,6 +31,16 @@ string RecursionTester :: mystery(string word)
 	{
 		return word + mystery(word.substr(0, word.length() - 1));
 	}
+
+//	if (int num = 1 == word.length())
+//	{
+//		return word;
+//	}
+//
+//	else
+//	{
+//		return word + mystery(word.substr(0, num + 1));
+//	}
 }
 
 void RecursionTester :: testRecursionNumbers()
