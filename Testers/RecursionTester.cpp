@@ -9,7 +9,14 @@
 
 int RecursionTester :: fib(int number)
 {
-	return 0;
+	if (number == 0 || number == 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return fib (number - 1) + fib (number -2);
+	}
 }
 
 string RecursionTester :: mystery(string word)
