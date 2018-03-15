@@ -47,6 +47,19 @@ void SortingTester :: testSorts()
 {
 	Timer sortTimer;
 	swapCount = 0;
+	vector<CrimeData> data = FileController::readCrimeDataToVector("");
+
+	vector<CrimeData> smaller;
+	for (int index = 0; index < 10000; index++)
+	{
+		smaller.push_back(data[index]);
+	}
+
+	sortTimer.startTimer();
+	quickSort(smaller, 0, smaller.size());
+	sortTimer.stopTimer();
+	sortTimer.displayInformation();
+	cout << "The number of swaps were: " << swapCount << endl;
 }
 
 
