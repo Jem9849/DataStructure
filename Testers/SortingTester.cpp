@@ -47,7 +47,7 @@ void SortingTester :: testSorts()
 {
 	Timer sortTimer;
 	swapCount = 0;
-	vector<CrimeData> data = FileController::readCrimeDataToVector("");
+	vector<CrimeData> data = FileController::readCrimeDataToVector("C://Users//Jeremy//Documents//Eclipse Coding//DataStructure//Data//crime.csv");
 
 	vector<CrimeData> smaller;
 	for (int index = 0; index < 10000; index++)

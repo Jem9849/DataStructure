@@ -25,9 +25,11 @@ void Controller :: start()
 //	myOtherTester.stackVersusList();
 //	myOtherTester.stackVersusQueue();
 //	myOtherTester.queueVersusList();
-	RecursionTester test;
-	test.testRecursionNumbers();
-	test.testRecursionString();
+//	RecursionTester test;
+//	test.testRecursionNumbers();
+//	test.testRecursionString();
+	SortingTester test;
+	test.testSorts();
 
 //	Timer codeTimer;
 //	codeTimer.startTimer();
