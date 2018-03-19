@@ -60,6 +60,15 @@ public:
 };
 
 
+template <class Type>
+const int Graph<Type> :: MAXIMUM;
+
+template <class Type>
+Graph<Type> :: Graph()
+{
+	this -> vertexCount = 0;
+}
+
 
 
 
