@@ -226,7 +226,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
 template <class Type>
 int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
 {
-	assert(vertex < currentGraph.size());
+	assert(vertex >= 0 && vertex < vertexCount);
 
 	int cost = 0;
 	bool visited[MAXIMUM];
