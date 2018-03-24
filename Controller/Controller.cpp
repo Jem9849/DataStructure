@@ -28,8 +28,10 @@ void Controller :: start()
 //	RecursionTester test;
 //	test.testRecursionNumbers();
 //	test.testRecursionString();
-	SortingTester test;
-	test.testSorts();
+//	SortingTester test;
+//	test.testSorts();
+	GraphTester test;
+	test.testGraphs();
 
 //	Timer codeTimer;
 //	codeTimer.startTimer();
@@ -61,58 +63,58 @@ void Controller :: start()
 //
 //}
 
-void Controller :: testArray()
-{
-	Array<int> JemArray(45);
+//void Controller :: testArray()
+//{
+//	Array<int> JemArray(45);
+//
+//	cout << JemArray.getSize() << endl;
+//
+//	JemArray[0] = 123;
+//	JemArray.setAtIndex(0, 321);
+//
+//	cout << JemArray[0] << endl;
+//}
 
-	cout << JemArray.getSize() << endl;
-
-	JemArray[0] = 123;
-	JemArray.setAtIndex(0, 321);
-
-	cout << JemArray[0] << endl;
-}
-
-void Controller :: testLinkedList()
-{
-	LinkedList<int> numbers;
-	LinkedList<double> realNumbers;
-	LinkedList<string> names;
-	//LinkedList<CrimeData> crime;
-
-	//crime = FileController :: readDataToList("C://Users//Jeremy//Documents//Eclipse Coding//DataStructure//Data//crime.csv");
-
-	numbers.add(23);
-	numbers.add(64);
-	numbers.add(75);
-
-	realNumbers.add(23.5);
-	realNumbers.add(13.63);
-	realNumbers.add(3.144325235235);
-
-	names.add("Jeremy");
-	names.add("Whoviey");
-	names.add("Sister Rachel");
-	names.addAtIndex(1, "Rachid");
-
-
-	cout << numbers.getFront() -> getData() << ", is at the front." << endl;
-	cout << numbers.getEnd() -> getData() << ", is at the end." << endl;
-
-	cout << realNumbers.getFront() -> getData() << ", is at the front." << endl;
-	cout << realNumbers.getEnd() -> getData() << ", is at the end." << endl;
-
-	realNumbers.remove(0);
-
-	cout << realNumbers.getFront() -> getData() << ", is at the end." << endl;
-
-	cout << names.getFront() -> getData() << ", is at the front." << endl;
-	cout << names.getEnd() -> getData() << ", is at the end." << endl;
-
-	cout << names.getFromIndex(2) << ", is at index 2." << endl;
-
-	//cout << crime.getFront() -> getData() << ", is at the front." << endl;
-	//cout << crime.getEnd() -> getData() << ", is at the end." << endl;
-}
+//void Controller :: testLinkedList()
+//{
+//	LinkedList<int> numbers;
+//	LinkedList<double> realNumbers;
+//	LinkedList<string> names;
+//	//LinkedList<CrimeData> crime;
+//
+//	//crime = FileController :: readDataToList("C://Users//Jeremy//Documents//Eclipse Coding//DataStructure//Data//crime.csv");
+//
+//	numbers.add(23);
+//	numbers.add(64);
+//	numbers.add(75);
+//
+//	realNumbers.add(23.5);
+//	realNumbers.add(13.63);
+//	realNumbers.add(3.144325235235);
+//
+//	names.add("Jeremy");
+//	names.add("Whoviey");
+//	names.add("Sister Rachel");
+//	names.addAtIndex(1, "Rachid");
+//
+//
+//	cout << numbers.getFront() -> getData() << ", is at the front." << endl;
+//	cout << numbers.getEnd() -> getData() << ", is at the end." << endl;
+//
+//	cout << realNumbers.getFront() -> getData() << ", is at the front." << endl;
+//	cout << realNumbers.getEnd() -> getData() << ", is at the end." << endl;
+//
+//	realNumbers.remove(0);
+//
+//	cout << realNumbers.getFront() -> getData() << ", is at the end." << endl;
+//
+//	cout << names.getFront() -> getData() << ", is at the front." << endl;
+//	cout << names.getEnd() -> getData() << ", is at the end." << endl;
+//
+//	cout << names.getFromIndex(2) << ", is at index 2." << endl;
+//
+//	//cout << crime.getFront() -> getData() << ", is at the front." << endl;
+//	//cout << crime.getEnd() -> getData() << ", is at the end." << endl;
+//}
 
 

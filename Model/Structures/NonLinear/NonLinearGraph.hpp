@@ -19,7 +19,7 @@ template<class Type>
 class Graph
 {
 private:
-	static const int MAXIMUM = 20;
+	static const int MAXIMUM = 50;
 	bool adjacencyMatrix [MAXIMUM][MAXIMUM];
 	int weightCostMatrix [MAXIMUM][MAXIMUM];
 	Type graphData[MAXIMUM];
@@ -85,7 +85,7 @@ template <class Type>
 Type& Graph<Type> :: operator[](int vertex)
 {
 	assert(vertex < vertexCount);
-	return graphData(vertex);
+	return graphData[vertex];
 }
 
 //Right hand side operator
@@ -93,7 +93,7 @@ template <class Type>
 Type Graph<Type> :: operator[](int vertex) const
 {
 	assert(vertex < vertexCount);
-	return graphData(vertex);
+	return graphData[vertex];
 }
 
 template <class Type>
