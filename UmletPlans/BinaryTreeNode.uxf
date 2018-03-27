@@ -18,14 +18,54 @@
 + BinaryTreeNode() : constructor
 + BinaryTreeNode(Type data) : constructor
 
-+ getRoot() : BinaryTreeNode&lt;Type&gt; *
-+ getLeft() : BinaryTreeNode&lt;Type&gt; *
-+ getRight() : BinaryTreeNode&lt;Type&gt; *
++ getRootNode() : BinaryTreeNode&lt;Type&gt; *
++ getLeftNode() : BinaryTreeNode&lt;Type&gt; *
++ getRightNode() : BinaryTreeNode&lt;Type&gt; *
 
-+ setRootNode(BinaryTreeNode&lt;Type&gt; *) : void
-+ setLeftNode(BinaryTreeNode&lt;Type&gt; *) : void
-+ setRightNode(BinaryTreeNode&lt;Type&gt; *) : void</panel_attributes>
++ setRootNode(BinaryTreeNode&lt;Type&gt; * root) : void
++ setLeftNode(BinaryTreeNode&lt;Type&gt; * left) : void
++ setRightNode(BinaryTreeNode&lt;Type&gt; * right) : void</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>270</y>
+      <w>360</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Tree&lt;Type&gt;
+--
+# root : BinaryTreeNode&lt;Type&gt;
+--
+*Informational Methods*
++ getSize() : int
++ getHeight() : int
++ isComplete() : bool
++ isBalanced() : bool
+*Data Methods*
++ insert(Type) : void
++ contains(Type) : bool
++ remove(Type) : void
+
+*Traversals*
++ inOrderTraversal() : void
++ preOrderTraversal() : void
++ postOrderTraversal() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>140</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Extends
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -44,17 +84,5 @@
 +getData() : Type
 +setData(Type data) : void</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>380</x>
-      <y>140</y>
-      <w>180</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Extends
-lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
   </element>
 </diagram>
