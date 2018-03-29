@@ -26,7 +26,7 @@ protected:
 	void postOrderTraversal(BinaryTreeNode<Type> * postStart);
 
 	BinaryTreeNode<Type> * getRightMostChild(BinaryTreeNode<Type> * current);
-	BinaryTreeNode<Type> * getLeftMostChild(binaryTreeNode<Type> * current);
+	BinaryTreeNode<Type> * getLeftMostChild(BinaryTreeNode<Type> * current);
 
 	void removeNode(BinaryTreeNode<Type> * removeMe);
 
@@ -54,6 +54,127 @@ public:
 	Type findMinimum();
 	Type findMaximum();
 };
+
+template<class Type>
+int calculateSize(BinaryTreeNode<Type> * startNode)
+{
+
+}
+
+template<class Type>
+int calculateHeight(BinaryTreeNode<Type> * startNode)
+{
+
+}
+
+template<class Type>
+bool isBalanced(BinaryTreeNode<Type> * startNode)
+{
+
+}
+
+template<class Type>
+bool isComplete(BinaryTreeNode<Type> * startNode)
+{
+
+}
+
+template<class Type>
+void inOrderTraversal(BinaryTreeNode<Type> * inStart)
+{
+
+}
+
+template<class Type>
+void preOrderTraversal(BinaryTreeNode<Type> * preStart)
+{
+
+}
+
+template<class Type>
+void postOrderTraversal(BinaryTreeNode<Type> * postStart)
+{
+
+}
+
+
+template<class Type>
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRightMostChild(BinaryTreeNode<Type> * current)
+{
+
+}
+
+template<class Type>
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftMostChild(BinaryTreeNode<Type> * current)
+{
+
+}
+
+
+template<class Type>
+void removeNode(BinaryTreeNode<Type> * removeMe)
+{
+
+}
+
+
+template<class Type>
+int getSize()
+{
+
+}
+
+template<class Type>
+int getHeight()
+{
+
+}
+
+template<class Type>
+bool isComplete()
+{
+
+}
+
+template<class Type>
+bool isBalanced()
+{
+
+}
+
+template<class Type>
+bool contains(Type value)
+{
+
+}
+
+template<class Type>
+void insert(Type itemToInsert)
+{
+
+}
+
+template<class Type>
+void remove(Type value)
+{
+
+}
+
+
+template<class Type>
+Type findMinimum()
+{
+
+}
+
+template<class Type>
+Type findMaximum()
+{
+
+}
+
+
+
 
 
 
