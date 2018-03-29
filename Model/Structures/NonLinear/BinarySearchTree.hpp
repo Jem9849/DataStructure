@@ -55,44 +55,56 @@ public:
 	Type findMaximum();
 };
 
-template<class Type>
-int calculateSize(BinaryTreeNode<Type> * startNode)
+template <class Type>
+BinarySearchTree<Type> :: BinarySearchTree()
+{
+	this -> root = nullptr;
+}
+
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
 {
 
 }
 
 template<class Type>
-int calculateHeight(BinaryTreeNode<Type> * startNode)
+int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * startNode)
 {
 
 }
 
 template<class Type>
-bool isBalanced(BinaryTreeNode<Type> * startNode)
+int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * startNode)
 {
 
 }
 
 template<class Type>
-bool isComplete(BinaryTreeNode<Type> * startNode)
+bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * startNode)
 {
 
 }
 
 template<class Type>
-void inOrderTraversal(BinaryTreeNode<Type> * inStart)
+bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode)
 {
 
 }
 
 template<class Type>
-void preOrderTraversal(BinaryTreeNode<Type> * preStart)
+void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * inStart)
 {
 
 }
 
 template<class Type>
-void postOrderTraversal(BinaryTreeNode<Type> * postStart)
+void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * preStart)
+{
+
+}
+
+template<class Type>
+void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * postStart)
 {
 
 }
@@ -112,63 +124,106 @@ BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftMostChild(BinaryTreeNode<T
 
 
 template<class Type>
-void removeNode(BinaryTreeNode<Type> * removeMe)
+void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
 {
 
 }
 
 
 template<class Type>
-int getSize()
+int BinarySearchTree<Type> :: getSize()
 {
 
 }
 
 template<class Type>
-int getHeight()
+int BinarySearchTree<Type> :: getHeight()
 {
 
 }
 
 template<class Type>
-bool isComplete()
+bool BinarySearchTree<Type> :: isComplete()
 {
 
 }
 
 template<class Type>
-bool isBalanced()
+bool BinarySearchTree<Type> :: isBalanced()
 {
 
 }
 
 template<class Type>
-bool contains(Type value)
+bool BinarySearchTree<Type> :: contains(Type value)
 {
 
 }
 
 template<class Type>
-void insert(Type itemToInsert)
+void BinarySearchTree<Type> :: insert(Type itemToInsert)
+{
+	BinaryTreeNode<Type> * insertMe = new BinaryTreeNode<Type>(itemToInsert);
+	BinaryTreeNode<Type> * previous = nullptr;
+	BinaryTreeNode<Type> * current = this -> root;
+
+	if (current == nullptr)
+	{
+		this -> root = insertMe;
+	}
+
+	else
+	{
+		while(current != nullptr)
+		{
+			previous = current;
+			if (itemToInsert < current -> getData())
+			{
+				current = current -> getLeftNode();
+			}
+
+			else if (itemToInsert > current -> getData())
+			{
+				current = current -> getRightNode();
+			}
+
+			else // Remove cerr after verification of understanding
+			{
+				cerr << "Item exists already - Exiting insert" << endl;
+				delete insertMe;
+				return; // Okay becuase it is returning nothing.
+			}
+		}
+
+		if (previous -> getData() > itemToInsert)
+		{
+			previous -> setLeftNode(insertMe);
+		}
+
+		else
+		{
+			previous -> setRightNode(insertMe);
+		}
+
+		insertMe -> setRootNode(previous);
+	}
+}
+
+template<class Type>
+void BinarySearchTree<Type> :: remove(Type value)
+{
+
+}
+
+
+template<class Type>
+Type BinarySearchTree<Type> :: findMinimum()
 {
 
 }
 
 template<class Type>
-void remove(Type value)
-{
-
-}
-
-
-template<class Type>
-Type findMinimum()
-{
-
-}
-
-template<class Type>
-Type findMaximum()
+Type BinarySearchTree<Type> :: findMaximum()
 {
 
 }
