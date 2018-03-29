@@ -93,13 +93,13 @@ bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode)
 }
 
 template<class Type>
-BinaryTreeNode<Type> :: BinaryTreeNode<Type> * getRoot()
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRoot()
 {
 
 }
 
 template<class Type>
-void setRoot(BinaryTreeNode<Type> * root)
+void BinaryTreeNode<Type> :: setRoot(BinaryTreeNode<Type> * root)
 {
 
 }
@@ -137,13 +137,13 @@ void  BinarySearchTree<Type> :: inOrderTraversal()
 template<class Type>
 void  BinarySearchTree<Type> :: preOrderTraversal()
 {
-
+	preOrderTraversal(this -> root);
 }
 
 template<class Type>
 void  BinarySearchTree<Type> :: postOrderTraversal()
 {
-
+	postOrderTraversal(this -> root);
 }
 
 
