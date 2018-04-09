@@ -8,6 +8,7 @@
 #ifndef MODEL_STRUCTURES_NONLINEAR_BINARYSEARCHTREE_HPP_
 #define MODEL_STRUCTURES_NONLINEAR_BINARYSEARCHTREE_HPP_
 
+#include "../../Nodes/BinaryTreeNode.hpp"
 #include "Tree.hpp"
 #include <iostream>
 using namespace std;
@@ -43,7 +44,7 @@ public:
 	void preOrderTraversal();
 	void postOrderTraversal();
 	void demoTraversalSteps(BinaryTreeNode<Type> * node);
-	void demo();
+	//void demo();
 
 	int getSize();
 	int getHeight();
@@ -71,7 +72,7 @@ BinarySearchTree<Type> :: ~BinarySearchTree()
 }
 
 template<class Type>
-int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * startNode)
+int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * current)
 {
 	if (current != nullptr)
 	{
@@ -82,7 +83,7 @@ int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * startNode)
 }
 
 template<class Type>
-int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * startNode)
+int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * current)
 {
 	if (current != nullptr)
 	{
@@ -92,7 +93,7 @@ int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * startNode)
 }
 
 template<class Type>
-bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * startNode)
+bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
 {
 	int leftHeight = 0;
 	int rightHeight = 0;
@@ -118,9 +119,9 @@ bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * startNode)
 }
 
 template<class Type>
-bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int index, int size)
+bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * current, int index, int size)
 {
-	if (startNode == nullptr)
+	if (current == nullptr)
 	{
 		return true;
 	}
@@ -128,14 +129,14 @@ bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int 
 	{
 		return false;
 	}
-	return (isComplete(startNode -> getLeftNode(), 2 * index + 1, size) &&
-			isComplete(startNode -> getRightNode(), 2 * index + 2, size));
+	return (isComplete(current -> getLeftNode(), 2 * index + 1, size) &&
+			isComplete(current -> getRightNode(), 2 * index + 2, size));
 }
 
 template<class Type>
-BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRoot()
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRoot()
 {
-
+	return nullptr;
 }
 
 //template<class Type>
@@ -145,7 +146,7 @@ BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRoot()
 //}
 
 template<class Type>
-void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * inStart)
+void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
 {
 	//if (inStart != nullptr)
 	if (currentNode != nullptr)
@@ -161,18 +162,18 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * inStart)
 }
 
 template<class Type>
-void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * preStart)
+void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentNode)
 {
 	if (currentNode != nullptr)
 	{
 		cout << currentNode -> getData() << endl;
 		preOrderTraversal(currentNode -> getLeftNode());
-		preOrderTraversaL(currentNode -> getRightNode());
+		preOrderTraversal(currentNode -> getRightNode());
 	}
 }
 
 template<class Type>
-void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * postStart)
+void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * currentNode)
 {
 	if (currentNode != nullptr)
 	{
@@ -205,15 +206,15 @@ void  BinarySearchTree<Type> :: postOrderTraversal()
 
 
 template<class Type>
-BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRightMostChild(BinaryTreeNode<Type> * current)
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNode<Type> * current)
 {
-
+	return nullptr;
 }
 
 template<class Type>
-BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftMostChild(BinaryTreeNode<Type> * current)
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinaryTreeNode<Type> * current)
 {
-
+	return nullptr;
 }
 
 
@@ -329,9 +330,9 @@ void BinarySearchTree<Type> :: remove(Type value)
 //}
 
 template <class Type>
-void BinarySearchTree<Type> :: demoTraversalSteps(BinaryTreeNode<Type> * node)
+void BinarySearchTree<Type> :: demoTraversalSteps(BinaryTreeNode<Type> * start)
 {
-	if (start != nullstr)
+	if (start != nullptr)
 	{
 		cout << "check if left is here" << endl;
 		demoTraversalSteps(start -> getLeftNode());
@@ -346,11 +347,11 @@ void BinarySearchTree<Type> :: demoTraversalSteps(BinaryTreeNode<Type> * node)
 	}
 }
 
-template <class Type>
-void BinaryTreeNode<Type> :: demo()
-{
-	demoTraversalSteps(this -> root);
-}
+//template <class Type>
+//void BinaryTreeNode<Type> :: demo()
+//{
+//	demoTraversalSteps(this -> root);
+//}
 
 
 #endif /* MODEL_STRUCTURES_NONLINEAR_BINARYSEARCHTREE_HPP_ */

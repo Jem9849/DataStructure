@@ -27,13 +27,21 @@ void BinaryTreeTester :: doTreeStuff()
 	wordTree.insert("aslara");
 	wordTree.insert("muraslara");
 
-	testTree.demo();
+	//testTree.demo();
 	testTree.inOrderTraversal();
+	cout << endl;
 	testTree.preOrderTraversal();
+	cout << endl;
 	testTree.postOrderTraversal();
+	cout << endl;
 
-	wordTree.demo();
+	//wordTree.demo();
 	wordTree.inOrderTraversal();
+	cout << endl;
+	wordTree.preOrderTraversal();
+	cout << endl;
+	wordTree.postOrderTraversal();
+	cout << endl;
 }
 
 

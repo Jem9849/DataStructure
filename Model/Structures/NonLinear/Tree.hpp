@@ -8,7 +8,7 @@
 #ifndef MODEL_STRUCTURES_NONLINEAR_TREE_HPP_
 #define MODEL_STRUCTURES_NONLINEAR_TREE_HPP_
 
-#include "../../Model/Nodes/BinaryTreeNode.hpp"
+#include "../../Nodes/BinaryTreeNode.hpp"
 
 template <class Type>
 class Tree

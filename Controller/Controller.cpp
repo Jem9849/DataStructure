@@ -33,6 +33,7 @@ void Controller :: start()
 //	GraphTester test;
 //	test.testGraphs();
 	BinaryTreeTester test;
+	test.doTreeStuff();
 
 //	Timer codeTimer;
 //	codeTimer.startTimer();

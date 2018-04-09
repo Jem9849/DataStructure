@@ -9,7 +9,7 @@
 #define MODEL_STRUCTURES_LINEAR_QUEUE_HPP_
 
 #include "LinkedList.hpp"
-#include <iostream>;
+#include <iostream>
 using namespace std;
 
 template <class Type>
