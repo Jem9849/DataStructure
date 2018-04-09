@@ -21,8 +21,19 @@ void BinaryTreeTester :: doTreeStuff()
 	testTree.insert(13);
 	testTree.insert(17);
 
+	wordTree.insert("ra");
+	wordTree.insert("ara");
+	wordTree.insert("lara");
+	wordTree.insert("aslara");
+	wordTree.insert("muraslara");
+
 	testTree.demo();
 	testTree.inOrderTraversal();
+	testTree.preOrderTraversal();
+	testTree.postOrderTraversal();
+
+	wordTree.demo();
+	wordTree.inOrderTraversal();
 }
 
 

@@ -19,11 +19,13 @@ protected:
 	int calculateSize(BinaryTreeNode<Type> * startNode);
 	int calculateHeight(BinaryTreeNode<Type> * startNode);
 	bool isBalanced(BinaryTreeNode<Type> * startNode);
-	bool isComplete(BinaryTreeNode<Type> * startNode);
+	bool isComplete(BinaryTreeNode<Type> * startNode, int index, int size);
 
 	void inOrderTraversal(BinaryTreeNode<Type> * inStart);
 	void preOrderTraversal(BinaryTreeNode<Type> * preStart);
 	void postOrderTraversal(BinaryTreeNode<Type> * postStart);
+
+	void destroyTree(BinaryTreeNode<Type> *postStart);
 
 	BinaryTreeNode<Type> * getRightMostChild(BinaryTreeNode<Type> * current);
 	BinaryTreeNode<Type> * getLeftMostChild(BinaryTreeNode<Type> * current);
@@ -35,7 +37,7 @@ public:
 	~BinarySearchTree();
 
 	BinaryTreeNode<Type> * getRoot();
-	void setRoot(BinaryTreeNode<Type> * root);
+	//void setRoot(BinaryTreeNode<Type> * root);
 
 	void inOrderTraversal();
 	void preOrderTraversal();
@@ -107,24 +109,39 @@ void BinaryTreeNode<Type> :: setRoot(BinaryTreeNode<Type> * root)
 template<class Type>
 void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * inStart)
 {
-	if (inStart != nullptr)
+	//if (inStart != nullptr)
+	if (currentNode != nullptr)
 	{
-		inOrderTraversal(inStart -> getLeftNode());
-		cout << inStart -> getData() << endl;
-		inOrderTraversal(inStart -> getRightNode());
+		//inOrderTraversal(inStart -> getLeftNode());
+		//cout << inStart -> getData() << endl;
+		//inOrderTraversal(inStart -> getRightNode());
+
+		inOrderTraversal(currentNode -> getLeftNode());
+		cout << currentNode -> getData() << endl;
+		inOrderTraversal(currentNode -> getRightNode());
 	}
 }
 
 template<class Type>
 void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * preStart)
 {
-
+	if (currentNode != nullptr)
+	{
+		cout << currentNode -> getData() << endl;
+		preOrderTraversal(currentNode -> getLeftNode());
+		preOrderTraversaL(currentNode -> getRightNode());
+	}
 }
 
 template<class Type>
 void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * postStart)
 {
-
+	if (currentNode != nullptr)
+	{
+		postOrderTraversal(currentNode -> getLeftNode());
+		postOrderTraversal(currentNode -> getRightNode());
+		cout << currentNode -> getData() << endl;
+	}
 }
 
 
