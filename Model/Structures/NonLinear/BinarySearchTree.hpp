@@ -277,7 +277,7 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
 
 		if (previous != nullptr && temp -> getData() < previous -> getData())
 		{
-			previous -> setLeafNode(removeMe);
+			previous -> setLeftNode(removeMe);
 		}
 
 		else if (previous != nullptr && temp -> getData() > previous -> getData())
@@ -492,7 +492,7 @@ void BinarySearchTree<Type> :: remove(Type value)
 
 		if (current == nullptr)
 		{
-			cer << "Item not found, removal unsuccessful." << endl;
+			cerr << "Item not found, removal unsuccessful." << endl;
 		}
 
 		else if (hasBeenFound)

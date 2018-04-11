@@ -27,6 +27,19 @@ void BinaryTreeTester :: doTreeStuff()
 	wordTree.insert("aslara");
 	wordTree.insert("muraslara");
 
+
+	cout << endl;
+	cout << testTree.getHeight() << endl;
+	cout << testTree.isBalanced() << endl;
+	cout << testTree.isComplete() << endl;
+	cout << endl;
+
+	cout << endl;
+	cout << wordTree.getHeight() << endl;
+	cout << wordTree.isBalanced() << endl;
+	cout << wordTree.isComplete() << endl;
+	cout << endl;
+
 	//testTree.demo();
 	testTree.inOrderTraversal();
 	cout << endl;
@@ -42,6 +55,7 @@ void BinaryTreeTester :: doTreeStuff()
 	cout << endl;
 	wordTree.postOrderTraversal();
 	cout << endl;
+
 }
 
 
