@@ -208,13 +208,25 @@ void  BinarySearchTree<Type> :: postOrderTraversal()
 template<class Type>
 BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNode<Type> * current)
 {
-	return nullptr;
+	BinaryTreeNode<Type> * currentNode = current;
+	while (currentNode != nullptr)
+	{
+		currentNode = currentNode -> getRightNode();
+	}
+
+	return currentNode;
 }
 
 template<class Type>
 BinaryTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinaryTreeNode<Type> * current)
 {
-	return nullptr;
+	BinaryTreeNode<Type> * currentNode = current;
+	while (currentNode != nullptr)
+	{
+		currentNode = currentNode -> getLeftNode();
+	}
+
+	return currentNode;
 }
 
 
