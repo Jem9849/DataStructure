@@ -258,7 +258,34 @@ bool BinarySearchTree<Type> :: isBalanced()
 template<class Type>
 bool BinarySearchTree<Type> :: contains(Type value)
 {
-	return false;
+	BinaryTreeNode<Type> * current = this -> root;
+	if (current == nullptr)
+	{
+		return false;
+	}
+
+	else
+	{
+		while(current != nullptr)
+		{
+			if (value == current -> getData())
+			{
+				return true;
+			}
+
+			else if (value > current -> getData())
+			{
+				current = current -> getLeftNode();
+			}
+
+			else
+			{
+				current = current -> getRightNode();
+			}
+
+		}
+		return false;
+	}
 }
 
 template<class Type>
