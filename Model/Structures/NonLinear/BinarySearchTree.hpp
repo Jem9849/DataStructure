@@ -340,7 +340,62 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
 template<class Type>
 void BinarySearchTree<Type> :: remove(Type value)
 {
+	if (this -> root == nullptr)
+	{
+		cout << "Empty tree so removal is not possible." << endl;
+	}
 
+	else
+	{
+		BinaryTreeNode<Type> * current = this -> root;
+		BinaryTreeNode<Type> * previous = nullptr;
+		bool hasBeenFound = false;
+
+		while(current != nullptr && !hasBeenFound)
+		{
+			if (current -> getData() == value)
+			{
+				hasBeenFound = true;
+			}
+
+			else
+			{
+				previous = current;
+				if (value < current -> getData())
+				{
+					current = current -> getLeftNode();
+				}
+
+				else
+				{
+					current = current -> getRightNode();
+				}
+			}
+		}
+
+		if (current == nullptr)
+		{
+			cer << "Item not found, removal unsuccessful." << endl;
+		}
+
+		else if (hasBeenFound)
+		{
+			if (current == this -> root)
+			{
+				removeNode(this -> root);
+			}
+
+			else if (value < previous -> getData())
+			{
+				removeNode(previous -> getLeftNode());
+			}
+
+			else
+			{
+				removeNode(previous -> getRightNode());
+			}
+		}
+	}
 }
 
 
