@@ -505,17 +505,19 @@ void BinarySearchTree<Type> :: remove(Type value)
 }
 
 
-//template<class Type>
-//Type BinarySearchTree<Type> :: findMinimum()
-//{
-//
-//}
-//
-//template<class Type>
-//Type BinarySearchTree<Type> :: findMaximum()
-//{
-//
-//}
+template<class Type>
+Type BinarySearchTree<Type> :: findMinimum()
+{
+	assert(this -> root != nullptr);
+	return getLeftMostChild(this -> root) -> getData();
+}
+
+template<class Type>
+Type BinarySearchTree<Type> :: findMaximum()
+{
+	assert(this -> root != nullptr);
+	return getRightMostChild(this -> root) -> getData();
+}
 
 template <class Type>
 void BinarySearchTree<Type> :: demoTraversalSteps(BinaryTreeNode<Type> * start)
