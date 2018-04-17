@@ -26,15 +26,16 @@ public:
     void remove(Type value);
 };
 
+/*
+ A negative value means the right is greater than the left.
+ */
+
 template <class Type>
 AVLTree<Type> :: AVLTree() : BinarySearchTree<Type>()
 {
     this -> root nullptr;
 }
 
-/*
- A negative value means the right is greater than the left.
- */
 template <class Type>
 int AVLTree<Type> :: heightDifference (BinaryTreeNode<Type> * parent)
 {
