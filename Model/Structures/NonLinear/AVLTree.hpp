@@ -26,6 +26,11 @@ public:
     void remove(Type value);
 };
 
+template <class Type>
+AVLTree<Type> :: AVLTree<Type>
+{
+    
+}
 
 /*
  A negative value means the right is greater than the left.
