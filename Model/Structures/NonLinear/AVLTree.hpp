@@ -31,14 +31,25 @@ public:
  A negative value means the right is greater than the left.
  */
 template <class Type>
-int AVLTree<Type> :: height
+int AVLTree<Type> :: heightDifference (BinaryTreeNode<Type> * parent)
+{
+    
+}
+
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: leftRotation (BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;
+    changedNode = parent ->
+    
+}
 
 
 
 template <class Type>
 BinaryTreeNode<Type> * AVLTree<Type> :: rightRotation (BinaryTreeNode<Type> * parent)
 {
-    BinaryTreeNode<Type> * changeNode;
+    BinaryTreeNode<Type> * changedNode;
     changedNode = parent -> getRightNode();
     
     parent -> setRightChild(changedNode -> getLeftNode());
@@ -79,5 +90,26 @@ BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * p
     {
         if (heightDifference(parent -> getLeftNode()) > 0)
         {
-            
+            parent = leftRotation(parent);
+        }
+        
+        else
+        {
+            parent = leftRightRotation(parent);
+        }
+    }
+    
+    else if (balanceFactor < -1)
+    {
+        if (heightDifference(parent -> getRightNode()) > 0)
+        {
+            parent = rightLeftRotation(parent);
+        }
+        
+        else
+        {
+            parent = rightRotation(parent);
+        }
+    }
+    return parent;
 }
