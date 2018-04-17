@@ -181,7 +181,7 @@ BinaryTreeNode<Type> * AVLTree<Type> :: removeNode(BinaryTreeNode<Type> * parent
         {
             BinaryTreeNode<Type> * leftMost = this -> getLeftMostChild(parent -> getRightNode());
             parent -> setNodeData(leftMost -> getNodeData());
-            parent -> setRightChild(removeNode(parent -> getRightNode(), leftMost -> getNodedata()));
+            parent -> setRightChild(removeNode(parent -> getRightNode(), leftMost -> getNodeData()));
         }
     }
     
