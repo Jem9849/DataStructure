@@ -44,7 +44,7 @@ Hashtable<Type> :: Hashtable()
 template <class Type>
 Hashtable<Type> :: ~Hashtable()
 {
-
+	delete [] internalStorage;
 }
 
 template <class Type>
