@@ -76,6 +76,17 @@ long Hashtable<Type> :: getNextPrime()
 {
 
 }
+
+template <class Type>
+void Hashtable<Type> :: resize()
+{
+
 }
 
+template <class Type>
+void Hashtable<Type> :: insert(Type value)
+{
+
+}
+}
 #endif /* MODEL_STRUCTURES_NONLINEAR_HASHTABLE_HPP_ */
