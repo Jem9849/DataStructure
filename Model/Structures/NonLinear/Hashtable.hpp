@@ -88,5 +88,4 @@ void Hashtable<Type> :: insert(Type value)
 {
 
 }
-}
 #endif /* MODEL_STRUCTURES_NONLINEAR_HASHTABLE_HPP_ */
