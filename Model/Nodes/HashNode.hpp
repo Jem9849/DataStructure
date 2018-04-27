@@ -18,7 +18,7 @@ public:
 	HashNode();
 	HashNode(Type data);
 
-	long getKy() const;
+	long getKey() const;
 };
 
 template <class Type>
