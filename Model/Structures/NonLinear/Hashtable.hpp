@@ -86,6 +86,27 @@ void Hashtable<Type> :: resize()
 template <class Type>
 void Hashtable<Type> :: insert(Type value)
 {
-
+    this -> size++;
+    if (((this -> size * 1.000) / this -> capacity) > this -> loadFactor)
+    {
+        resize();
+    }
+    
+    HashNode<Type> * temp = new HashNode<Type>(value);
+    long index = findPosition(temp);
+    
+    if (internalStorage[index] == nullptr)
+    {
+        internalStorage[index] = temp;
+    }
+    
+    else
+    {
+        long updatedPosition = handleCollision(index);
+        if (updatedPosition != -1)
+        {
+            internalStorage[updatedPosition] = temp;
+        }
+    }
 }
 #endif /* MODEL_STRUCTURES_NONLINEAR_HASHTABLE_HPP_ */
