@@ -52,6 +52,13 @@ Hashtable<Type> :: ~Hashtable()
 }
 
 template <class Type>
+HashNode<Type> * Hashtable<Type> :: get(long index)
+{
+    assert(index < capacity);
+    return internalStorage[index];
+}
+
+template <class Type>
 bool Hashtable<Type> :: isPrime(long current)
 {
 	if (current <= 1)
