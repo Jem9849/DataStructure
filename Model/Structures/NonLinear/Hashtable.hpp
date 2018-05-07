@@ -33,7 +33,7 @@ public:
     bool contains(HashNode<Type> * value);
 
 	void insert(Type data);
-	long getSize();
+	//long getSize();
 };
 
 template <class Type>
@@ -56,6 +56,22 @@ HashNode<Type> * Hashtable<Type> :: get(long index)
 {
     assert(index < capacity);
     return internalStorage[index];
+}
+
+template <class Type>
+bool Hashtable<Type> :: contains(HashNode<Type> * value)
+{
+    if (internalStorage[findPosition(value)] -> getData() == value -> getData())
+    {
+        return true;
+    }
+    
+    long other = handleCollision(findPosition(value));
+    if (internalStorage[other] -> getData() == value -> getData())
+    {
+        return true;
+    }
+    return false;
 }
 
 template <class Type>
@@ -117,11 +133,11 @@ long Hashtable<Type> :: handleCollision(long currentPosition)
     return -1;
 }
 
-template <class Type>
-long Hashtable<Type> :: getSize()
-{
-
-}
+//template <class Type>
+//long Hashtable<Type> :: getSize()
+//{
+//
+//}
 
 template <class Type>
 long Hashtable<Type> :: getNextPrime()
