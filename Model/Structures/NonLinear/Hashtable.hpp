@@ -115,7 +115,14 @@ long Hashtable<Type> :: getSize()
 template <class Type>
 long Hashtable<Type> :: getNextPrime()
 {
-
+    long nextPrime = (this -> capacity * 2) + 1;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime += 2;
+    }
+    
+    return nextPrime;
 }
 
 template <class Type>
