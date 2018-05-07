@@ -25,7 +25,7 @@ private:
 	bool isPrime(long current);
 	void resize();
 	long findPosition(HashNode<Type> * insertNode);
-	long handleCollision(HashNode<Type> * insertedNode, long index);
+	long handleCollision(long currentPosition);
 public:
 	Hashtable();
 	~Hashtable();
