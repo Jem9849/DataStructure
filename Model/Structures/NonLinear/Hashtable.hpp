@@ -60,9 +60,24 @@ long Hashtable<Type> :: findPosition(HashNode<Type> * insert)
 }
 
 template <class Type>
-long Hashtable<Type> :: handleCollision(HashNode<Type> * current, long index)
+long Hashtable<Type> :: handleCollision(long currentPosition)
 {
-	return -1;
+    long shift = 17;
+    
+    for (long position = currentPosition + shift; position != currentPosition; position += shift)
+    {
+        if (position >= capacity)
+        {
+            position = position % capacity;
+        }
+        
+        if (internalStorage[position] == nullptr)
+        {
+            return position;
+        }
+    }
+    
+    return -1;
 }
 
 template <class Type>
