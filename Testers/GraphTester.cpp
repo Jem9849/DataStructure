@@ -111,42 +111,70 @@ void GraphTester :: compareTraversal()
 	int confirm = 0;
 	int tConfirm = 0;
 	int count = 0;
+    int cost = 0;
+    int minCost = 0;
+    int point = 0;
+    int minPoint = 0;
+    
+	//std::cout << "Write 1 to continue.";
+    
+    for (int a = 0; a < puzzle.size(); a++)
+    {
+        if (puzzle.costTraversal(puzzle, a) > cost)
+        {
+            cost = puzzle.costTraversal(puzzle, a);
+            point = a;
+        }
+        
+        if (puzzle.costTraversal(puzzle, a) < minCost)
+        {
+            minCost = puzzle.costTraversal(puzzle, a);
+            minPoint = a;
+        }
+    }
 
-	std::cout << "Write 1 to continue.";
-
-	while (continu == true)
-	{
-		std::cin >> confirm;
-		std::cin >> tConfirm;
-
-		if (tConfirm == 1)
-		{
-			traverseContinu = true;
-		}
-
-		else if (confirm == 1)
-		{
-			continu = true;
-		}
-
-		// D9? 12D Megan Smith.
-
-		// 9? 28? 33? 12?
-
-		while (traverseContinu == true)
-		{
-			std::cout << count << endl;
-			puzzle.breadthFirstTraversal(puzzle, count);
-			count++;
-			traverseContinu = false;
-		}
-	}
+    std::cout << point << endl;
+    std::cout << cost << endl << endl;
+    
+    std::cout << minPoint << endl;
+    std::cout << minCost << endl << endl;
+//    while (continu == true)
+//    {
+//        std::cin >> confirm;
+//        std::cin >> tConfirm;
+//
+//        if (tConfirm == 1)
+//        {
+//            traverseContinu = true;
+//        }
+//
+//        else if (confirm == 1)
+//        {
+//            continu = true;
+//        }
+//
+//        // D9? 12D Megan Smith.
+//
+//        // 9? 28? 33? 12?
+//
+//        while (traverseContinu == true)
+//        {
+//            std::cout << count << endl;
+//            //puzzle.breadthFirstTraversal(puzzle, count);
+//            //puzzle.depthFirstTraversal(puzzle, count);
+//            //std::cout << puzzle.costTraversal(puzzle, count);
+//            count++;
+//            traverseContinu = false;
+//        }
+    
+        
+    
+}
 
 	//puzzle.depthFirstTraversal(puzzle, 12);
 	//puzzle.depthFirstTraversal(puzzle, 9);
 	//puzzle.breadthFirstTraversal(puzzle, 28);
 	//puzzle.breadthFirstTraversal(puzzle, 33);
-}
 
 void GraphTester :: findCheapestTraversal()
 {

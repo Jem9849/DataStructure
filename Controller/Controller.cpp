@@ -30,10 +30,10 @@ void Controller :: start()
 //	test.testRecursionString();
 //	SortingTester test;
 //	test.testSorts();
-//	GraphTester test;
-//	test.testGraphs();
-	BinaryTreeTester test;
-	test.doTreeStuff();
+	GraphTester test;
+	test.testGraphs();
+	//BinaryTreeTester test;
+	//test.doTreeStuff();
 
 //	Timer codeTimer;
 //	codeTimer.startTimer();
